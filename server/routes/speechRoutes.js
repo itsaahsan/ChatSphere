@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const asyncHandler = require('express-async-handler');
-const auth = require('../middleware/authMiddleware');
+const { protect } = require('../middleware/authMiddleware');
 const { speechToText, textToSpeechConvert } = require('../utils/speechService');
 
 const router = express.Router();
@@ -10,7 +10,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 // Speech-to-Text
 router.post(
   '/speech-to-text',
-  auth,
+  protect,
   upload.single('audio'),
   asyncHandler(async (req, res) => {
     if (!req.file) {
@@ -25,7 +25,7 @@ router.post(
 // Text-to-Speech
 router.post(
   '/text-to-speech',
-  auth,
+  protect,
   asyncHandler(async (req, res) => {
     const { text, languageCode } = req.body;
 

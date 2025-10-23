@@ -1,6 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const auth = require('../middleware/authMiddleware');
+const { protect } = require('../middleware/authMiddleware');
 const { generateAIReply, generateSummary, generateSmartReplies } = require('../utils/aiService');
 
 const router = express.Router();
@@ -8,7 +8,7 @@ const router = express.Router();
 // Generate AI reply
 router.post(
   '/reply',
-  auth,
+  protect,
   asyncHandler(async (req, res) => {
     const { messageContent, conversationContext } = req.body;
 
@@ -24,7 +24,7 @@ router.post(
 // Generate summary from messages
 router.post(
   '/summary',
-  auth,
+  protect,
   asyncHandler(async (req, res) => {
     const { messages } = req.body;
 
@@ -40,7 +40,7 @@ router.post(
 // Get smart reply suggestions
 router.post(
   '/smart-replies',
-  auth,
+  protect,
   asyncHandler(async (req, res) => {
     const { lastMessage } = req.body;
 
