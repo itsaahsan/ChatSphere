@@ -12,6 +12,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/speech": "^7.2.1",
+    "@google-cloud/text-to-speech": "^6.4.0",
+    "axios": "^1.12.2",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "crypto-js": "^4.2.0",
@@ -22,8 +25,10 @@
     "mongoose": "^8.19.2",
     "multer": "^2.0.2",
     "node-cache": "^5.1.2",
+    "openai": "^6.6.0",
     "simple-peer": "^9.11.1",
     "socket.io": "^4.8.1",
+    "speech-recognition": "^0.0.1",
     "twilio": "^5.10.3",
     "web-push": "^3.6.7",
     "webrtc": "^1.14.1"

@@ -11,6 +11,8 @@ const callRoutes = require('./routes/callRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
 const broadcastRoutes = require('./routes/broadcastRoutes');
+const aiRoutes = require('./routes/aiRoutes');
+const speechRoutes = require('./routes/speechRoutes');
 const cors = require('cors');
 const path = require('path');
 
@@ -92,6 +94,8 @@ app.use('/api/call', callRoutes);
 app.use('/api/notification', notificationRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/broadcast', broadcastRoutes);
+app.use('/api/ai', aiRoutes);
+app.use('/api/speech', speechRoutes);
 
 const notFound = (req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
