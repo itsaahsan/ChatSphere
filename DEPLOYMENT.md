@@ -11,7 +11,7 @@ Railway is a modern deployment platform perfect for full-stack applications. Thi
 1. **GitHub Account** - With the ChatSphere repository pushed
 2. **Railway Account** - Sign up at https://railway.app
 3. **MongoDB Atlas Account** - For cloud database (https://www.mongodb.com/cloud/atlas)
-4. **API Keys** - OpenAI and Google Cloud (optional)
+4. **API Keys** - Google Gemini and Google Cloud (optional)
 
 ---
 
@@ -82,7 +82,7 @@ NODE_ENV=production
 MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/chatsphere
 JWT_SECRET=your-super-secret-jwt-key-generate-random-string
 ENCRYPTION_KEY=your32characterencryptionkey!!
-OPENAI_API_KEY=sk-your-openai-key
+GEMINI_API_KEY=AIzaSyCywh89sWw4OUCrfXSNtllvjizBoFCFJI4
 VAPID_PUBLIC_KEY=your-public-key
 VAPID_PRIVATE_KEY=your-private-key
 GOOGLE_SPEECH_API_KEY=your-api-key (optional)

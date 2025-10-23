@@ -46,7 +46,7 @@ NODE_ENV=production
 MONGO_URI=mongodb+srv://your-user:your-password@cluster0.mongodb.net/chatsphere?retryWrites=true&w=majority
 JWT_SECRET=your-random-secret-key-here-make-it-long
 ENCRYPTION_KEY=your32characterencryptionkey!!
-OPENAI_API_KEY=sk-your-key-here (optional)
+GEMINI_API_KEY=AIzaSyCywh89sWw4OUCrfXSNtllvjizBoFCFJI4
 FRONTEND_URL=https://your-frontend-domain.com
 ```
 
