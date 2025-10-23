@@ -50,7 +50,7 @@ export default function VideoCallComponent({
         // Initialize peer connection
         const peer = new SimplePeer({
           initiator: true,
-          trickleIce: false,
+          trickle: false,
           stream: stream,
         });
 

@@ -54,6 +54,7 @@ export const userAPI = {
   searchUsers: (query: string) => api.get('/user', { params: { search: query } }),
   blockUser: (userId: string) => api.post('/user/block', { userId }),
   unblockUser: (userId: string) => api.post('/user/unblock', { userId }),
+  updateProfile: (data: any) => api.put('/user/profile', data),
 };
 
 export const aiAPI = {
